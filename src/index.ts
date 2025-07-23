@@ -23,7 +23,7 @@ app.get("/users", (req: Request, res: Response) => {
 
 app.get("/users/:id", (req: Request, res: Response) =>{
     let userId = Number (req.params.id);
-    let user = usuarios.find (user => user.id = userId) ;
+    let user = usuarios.find (user => user.id == userId) ;
     res.send(user);
 });
 // Endpoint para adicionar um novo usuário
